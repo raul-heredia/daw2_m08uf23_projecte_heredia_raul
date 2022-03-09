@@ -63,15 +63,26 @@ body.login {
     background: #395591;
 }
 
-.form span {
-    font-size: 75px;
-    color: #4b6cb7;
-}
-
 h5 {
     margin-bottom: 15px;
 }
 
 a.nav-link{
     color: white !important;
+}
+.hidden{
+    display: none;
+}
+.inline{
+    display: inline-block;
+}
+.flex-form{
+    gap: 5px !important;
+}
+input[type="radio"]{
+    width: 10%;
+    padding: 0px !important;
+}
+span.formLabel{
+    margin-top: -3px;
 }
