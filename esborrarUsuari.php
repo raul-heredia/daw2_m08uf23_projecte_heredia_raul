@@ -57,8 +57,12 @@ if (isset($_SESSION['admin'])) {
 
                     $ldap = new Ldap($opcions);
                     $ldap->bind();
-                    $isEsborrat = $ldap->delete($dn) ? "<b>Entrada esborrada</b><br>" : "<b>Error, Aquesta entrada no existeix</b><br>";
-                    echo $isEsborrat;
+                    $isEsborrat = false;
+                    try {
+                        if ($ldap->delete($dn)) echo "<b>Entrada esborrada</b><br>";
+                    } catch (Exception $e) {
+                        echo "<b>Error, Aquesta entrada no existeix</b><br>";
+                    }
                     echo '<a href="http://zend-rahema.fjeclot.net/ldap/esborrarUsuari.php">Esborrar un altre Usuari</a> <br />';
                     echo '<a href="http://zend-rahema.fjeclot.net/ldap/menu.php">Tornar a Inici</a>';
                 }
