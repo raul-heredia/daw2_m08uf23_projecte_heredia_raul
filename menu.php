@@ -47,6 +47,9 @@ if (isset($_SESSION['admin'])) {
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
+                        <a class="nav-link" href="http://zend-rahema.fjeclot.net/ldap/menu.php"><i class="bi bi-house-door-fill"></i> Inici </a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="http://zend-rahema.fjeclot.net/ldap/tancarsessio.php"><i class="bi bi-power"></i> Tancar Sessió </a>
                     </li>
             </div>
